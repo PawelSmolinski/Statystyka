@@ -24,7 +24,7 @@ library(tidyr)
 # Pogrupuj dane według płci i oblicz średnią zmianę w poziomie lęku i samopoczuciu.
 
 
-# Przekształć dane do formatu długuego (long format)
+# Przekształć dane do formatu długiego (long format)
 # Wybselekcjonuj kolumny związanne z poziomem lęku przed i po interwencji
 
 
