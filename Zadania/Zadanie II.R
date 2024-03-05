@@ -1,27 +1,24 @@
-# Instalacja pakietu dplyr, jeśli jeszcze nie jest zainstalowany
-# install.packages("dplyr")
+# Nowe dane, dane_terapia_kulturowa, zawierają kolumny: ID, Wiek, Grupa, Rasizm_Przed, Rasizm_Po. 
 
-# Załadowanie pakietu dplyr
-library(dplyr)
-
-# Załadowanie danych (reac.csv)
+# Zadanie 1: Filtracja
+# Zadanie: Wyfiltruj dane, aby zawierały tylko uczestników z grupy "TerapiaA".
 
 
-# Oblicz zmianę poziomu stresu i wyniku QoL dla każdego uczestnika badania 
-# Wykorzystaj operator %>% oraz funkcję mutate().
 
+# Zadanie 2: Selekcja i Filtracja
+# Zadanie: Wybierz kolumny Wiek, Grupa i Rasizm_Po, a następnie wyfiltruj, aby pokazać tylko wyniki uczestników w wieku powyżej 30 lat.
 
-# Podziel uczestników na grupy wiekowe („18–30”, „31–45”, „46–60”, „61+”). 
-# Wykorzystaj funkcję case_when().
+# Zadanie 3: Mutacja
+# Zadanie: Dodaj nową kolumnę Zmiana_Rasizmu, która będzie różnicą między Rasizm_Przed a Rasizm_Po.
 
+# Zadanie 4: Porównanie Efektów Terapii
+# Zadanie: Oblicz średnią zmianę w poziomie rasizmu dla grupy kontrolnej, TerapiaA i TerapiaB, a następnie porównaj te wyniki
 
-# Zmień nazwy niektórych zmiennych w zbiorze danych, aby uzyskać większą przejrzystość.
+# Zadanie 5: Zaawansowana Filtracja
+# Zadanie: Wyfiltruj dane, aby znaleźć uczestników, którzy zanotowali spadek poziomu rasizmu (czyli Rasizm_Przed > Rasizm_Po) i są w wieku powyżej 30 lat.
 
+# Zadanie 6: Zmiana nazwy zmiennych 
+# Zmień nazyw zmiennych, tak aby "Rasizm_Przed" i "Rasizm_Po" nazywały się po prostu "przed" i "po"
 
-# Przekształć zmienną plec oraz grupa_interwencyjna na zmienną kategorialną (factor). 
-
-
-# Wyodrębnij uczestników, u których obniżył się poziom stresu po interwencji.
-
-
-# Pogrupuj dane według grupy_interwencyjnej i oblicz średnie poziomy przed i po interwencji.
+# Zadanie 7: Zadanie 6: Przekształcenie Danych
+# Zadanie: Przekształć dane do długiego formatu, gdzie każdy wiersz przedstawia albo Rasizm_Przed, albo Rasizm_Po dla danego uczestnika.
