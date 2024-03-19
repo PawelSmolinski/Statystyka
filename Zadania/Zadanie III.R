@@ -1,58 +1,34 @@
-# Wczytanie potrzebnych pakietów
-library(ggplot2)
-library(tidyverse)
+# Wczytaj dane: dane_eksperyment_dlugie i nazwij je dane
 
-# W miejsce ___ wpisz odpowiednie instrukcje kodu 
+# Zadanie 1:
+# Utwórz histogram, aby zwizualizować rozkład wieku uczestników.
 
-# Wczytaj dane
-dane <- read.csv("___") # Podaj ścieżkę do pliku z danymi
+# Zadanie 2:
+# Wygeneruj wykres punktowy, aby zbadać korelację pomiędzy PoziomStresu a Samopoczucie. 
+# Dodaj linię trendu, aby zwizualizować trend między tymi dwiema zmiennymi.
 
-# Podstawowa analiza danych
-summary(___) # Podsumuj kolumnę z poziomem agresji przed terapią
-summary(___) # Podsumuj kolumnę z poziomem agresji po terapii
-
-# Oblicz średni wiek uczestników
+# Zadanie 3:
+# Utwórz podstawowy wykres pudełkowy, aby zwizualizować rozkład wieku wśród uczestników.
 
 
-# Oblicz maksymalny i minimalny poziom agresji przed terapią
-
-# Stwórz histogram przedstawiający rozkład wieku uczestników
-hist(dane$___, main = "___", xlab = "___", col = "___", border = "___")
-
-# Stwórz histogram przedstawiający rozkład poziomu agresji przed terapią
+# Zadanie 4:
+# Wizualizuj rozkład poziomów stresu przed terapią u wszystkich uczestników za pomocą wykresu pudełkowego.
+# Uwaga musisz użyć funkcji filter()
 
 
-# Stwórz wykres pudełkowy poziomu agresji przed i po terapii
-boxplot(dane$___, dane$___)
-
-#Stwórz wykres podełkowy poziomu rasizmu przed i po terapii 
-# Wykres musi zawierać nazyw oraz tytuł 
+# Zadanie 5:
+# Porównaj poziom stresu przed terapią pomiędzy różnymi rodzajami terapii za pomocą wykresów pudełkowych.
+# Podpowiedź: użyj fill = Grupa lub color = Grupa
 
 
-# Przekształć danych do formatu długiego
-dane_dlugie <- pivot_longer(___,
-                            names_to = "___" # Zmienna porządkująca,
-                            ___)
+# Zadanie 6:
+# Utwórz wykresy pudełkowe, aby zwizualizować zmiany poziomu stresu przed i po terapii, rozdzielone według terapi.
+# Podpowiedź: Użyj facet_wrap()
 
-# Przekształć zmeinna porządkująca z pivot_longer do typu factor z określoną kolejnością
-dane_dlugie$___ <- factor(dane_dlugie$___, 
-                          levels = c("Agresja_Przed", "Agresja_Po", "Rasizm_Przed", "Rasizm_Po"))
+# Zadanie 7:
+# Utwórz wykres przedstawiający dowolną wybraną zależność w danych. 
+# Zrób wykres najpiękniejszym jak potrafisz!
 
-# Stwórz wykres pudełkowy dla agresji przed i po terapii 
-ggplot(dane_dlugie, aes(x = ___, y = ___, fill = ___)) +
-  geom_boxplot() +
-  ggtitle("___") +
-  xlab("___") +
-  ylab("___") +
-  facet_wrap(~___)
 
-# Stwórz wykres pudełkowy dla rasizmu przed i po terapii 
 
-# Uruchom poniższy wykres:
-ggplot(dane, aes(x = Agresja_Przed, y = Rasizm_Przed)) +
-  geom_point() +  # Dodaje punkty danych z różnymi kolorami dla grup
-  geom_smooth(method = "lm", se = FALSE, color = "black") +  # Dodaje linię regresji bez obszaru ufności
-  labs(title = "Korelacja między agresją przed a rasizmem po", x = "Agresja przed", y = "Rasizm po") +
-  theme_minimal()  # Używa minimalnego motywu wykresu
 
-# Stwórz podbny wykres dla związku agresji z rasizmem po terapii

@@ -16,11 +16,7 @@
 # Stwórz wykres przedstawiający zależność poziomu stresu  po interwencji przed i po interwencji
 
 
-# Swtórz następujące wykresy z wykorzystaniem ggplot2
-
-library(ggplot2)
-library(dplyr)
-library(tidyr)
+# Swtórz następujące wykresy
 
 # Histogram Poziomu Stresu Przed Interwencją
 
@@ -30,7 +26,5 @@ library(tidyr)
 
 # Wykres Rozrzutu z Koncentracją Przed i Po Interwencji
 # Wykres rozrzutu może być użyteczny do pokazania zależności między wiekiem a zmianą w koncentracji po interwencji.
-dane$Zmiana_Koncentracji <- dane$Koncentracja_Po - dane$Koncentracja_Przed
-
 
 
